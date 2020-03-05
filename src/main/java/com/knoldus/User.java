@@ -1,25 +1,24 @@
 package com.knoldus;
 
-public class Student {
+public class User {
     int id;
     String name;
+    String city;
     int age;
-    Address address;
 
-    public Student(int id, String name, int age, Address address) {
+    public User(int id, String name, String city, int age) {
         this.id = id;
         this.name = name;
+        this.city = city;
         this.age = age;
-        this.address = address;
     }
 
     @Override
     public String toString() {
-        return "Student{"
-                + "id=" + id
+        return "User{" + "id=" + id
                 + ", name='" + name + '\''
+                + ", city='" + city + '\''
                 + ", age=" + age
-                + ", address=" + address
                 + '}';
     }
 }

@@ -1,6 +1,7 @@
 package com.knoldus;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -31,7 +32,18 @@ public class AppDriver {
 
         TimeZone timeZone = new TimeZone();
         String zoneId = "Australia/Sydney";
-        System.out.println(timeZone.getTime(zoneId));
+        System.out.println(timeZone.getTimeFromTimeZone(zoneId));
+
+        UserCRUDDriver userCRUDDriver = new UserCRUDDriver();
+        User ross = new User(1, "Ross", "Delhi", 18);
+        User chandler = new User(2, "Chandler", "Chennai", 24);
+        User phoebe = new User(3, "Phoebe", "Goa", 22);
+        User monica = new User(4, "Monica", "Pune", 30);
+        List<User> users = new ArrayList<>(Arrays.asList(ross, chandler, phoebe, monica));
+        userCRUDDriver.createUser(users).thenAccept(System.out::println);
+        userCRUDDriver.deleteUser(users).thenAccept(System.out::println);
+        userCRUDDriver.retrieveUser(users).thenAccept(System.out::println);
+        userCRUDDriver.updateUser(users).thenAccept(System.out::println);
 
         WordCount wordCount = new WordCount();
         String fileName = "./src/main/resources/intro.txt";
