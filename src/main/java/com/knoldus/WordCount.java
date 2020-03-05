@@ -13,11 +13,12 @@ public class WordCount {
         Map<String, Integer> counts = new HashMap<>();
         try (Stream<String> lines = Files.lines(Paths.get(fileName))) {
             lines.forEach(line ->
-                    Arrays.stream(line.split("[ ,!.]")).forEach(word ->
-                    {
+                    Arrays.stream(line.split("[ ,!.]")).forEach(word -> {
                         String getWord = word.toLowerCase();
                         int oldCount = 0;
-                        if (counts.containsKey(getWord)) oldCount = counts.get(getWord);
+                        if (counts.containsKey(getWord)) {
+                            oldCount = counts.get(getWord);
+                        }
                         counts.put(getWord, oldCount + 1);
                     }));
         } catch (IOException ex) {
