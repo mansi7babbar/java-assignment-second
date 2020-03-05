@@ -1,8 +1,8 @@
-package com.knoldus;
+package com.knoldus.student;
 
 import java.util.Optional;
 
-class Address {
+public class Address {
     String primaryAddress;
     Optional<String> secondaryAddress;
 

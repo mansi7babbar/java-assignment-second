@@ -1,4 +1,4 @@
-package com.knoldus;
+package com.knoldus.user;
 
 public class User {
     int id;

@@ -1,4 +1,4 @@
-package com.knoldus;
+package com.knoldus.user;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

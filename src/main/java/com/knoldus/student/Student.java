@@ -1,4 +1,4 @@
-package com.knoldus;
+package com.knoldus.student;
 
 public class Student {
     int id;
