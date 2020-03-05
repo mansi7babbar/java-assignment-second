@@ -12,7 +12,8 @@ public class AppDriver {
         System.out.println(dayOfWeek.getDayOfWeek(dob));
 
         LeapYear leapYear = new LeapYear();
-        System.out.println(leapYear.getleapYears());
+        LocalDate startDate = LocalDate.of(1950, 1, 26);
+        System.out.println(leapYear.getleapYears(startDate));
 
         LifeSpan lifeSpan = new LifeSpan();
         LocalDate birthDate = LocalDate.of(1998, 5, 7);
